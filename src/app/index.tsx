@@ -16,10 +16,10 @@ const Index = (): React.JSX.Element => {
       </View>
 
       {list.map((_, i) => (
-        <View key={i}>
+        <View style={styles.memoListItem} key={i}>
           <View>
-            <Text>買い物リスト</Text>
-            <Text>{new Date().toDateString()}</Text>
+            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+            <Text style={styles.memoListItemDate}>{new Date().toDateString()}</Text>
           </View>
           <View>
             <Text>X</Text>
@@ -60,6 +60,25 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 16,
     color: 'rgba(255, 255, 255, 0.7)'
+  },
+  memoListItem: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 16,
+    paddingHorizontal: 19,
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.15)'
+  },
+  memoListItemTitle: {
+    fontSize: 16,
+    lineHeight: 32
+  },
+  memoListItemDate: {
+    fontSize: 12,
+    lineHeight: 16,
+    color: 'grey'
   }
 })
 
