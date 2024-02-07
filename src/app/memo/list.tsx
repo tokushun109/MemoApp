@@ -2,7 +2,8 @@ import { View, StyleSheet } from 'react-native'
 import Header from '../../components/Header'
 import MemoListItem from '../../components/MemoListItem'
 import CircleButton from '../../components/CircleButton'
-import { Feather } from '@expo/vector-icons'
+import Icon from '../../components/Icon'
+import { IconEnum } from '../../../types/icon'
 
 const List = (): JSX.Element => {
   // 空オブジェクトのリストを作成
@@ -17,7 +18,7 @@ const List = (): JSX.Element => {
         <MemoListItem key={i} />
       ))}
       <CircleButton>
-        <Feather name="plus" size={40}></Feather>
+        <Icon name={IconEnum.Plus} />
       </CircleButton>
     </View>
   )
