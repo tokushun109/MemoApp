@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 
-const CircleButton = (): React.JSX.Element => {
+const CircleButton = (): JSX.Element => {
   return (
     <View style={styles.circleButton}>
       <Text style={styles.circleButtonLabel}>+</Text>
