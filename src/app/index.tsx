@@ -15,7 +15,7 @@ const Index = (): JSX.Element => {
       {list.map((_, i) => (
         <MemoListItem key={i} />
       ))}
-      <CircleButton />
+      <CircleButton>+</CircleButton>
     </View>
   )
 }
