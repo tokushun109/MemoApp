@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import Header from '../components/Header'
+import MemoListItem from '../components/MemoListItem'
 
 const Index = (): React.JSX.Element => {
   // 空オブジェクトのリストを作成
@@ -11,15 +12,7 @@ const Index = (): React.JSX.Element => {
     <View style={styles.container}>
       <Header />
       {list.map((_, i) => (
-        <View style={styles.memoListItem} key={i}>
-          <View>
-            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-            <Text style={styles.memoListItemDate}>{new Date().toDateString()}</Text>
-          </View>
-          <View>
-            <Text>X</Text>
-          </View>
-        </View>
+        <MemoListItem key={i} />
       ))}
 
       <View style={styles.circleButton}>
@@ -33,25 +26,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white'
-  },
-  memoListItem: {
-    backgroundColor: 'white',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 16,
-    paddingHorizontal: 19,
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderColor: 'rgba(0, 0, 0, 0.15)'
-  },
-  memoListItemTitle: {
-    fontSize: 16,
-    lineHeight: 32
-  },
-  memoListItemDate: {
-    fontSize: 12,
-    lineHeight: 16,
-    color: 'grey'
   },
   circleButton: {
     position: 'absolute',
