@@ -1,13 +1,18 @@
 import { StatusBar } from 'expo-status-bar'
-import { useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import Hello from './src/components/Hello'
 
 const App = (): React.JSX.Element => {
-  const [text, setText] = useState<string>('stateのテキストです')
-
   return (
     <View style={styles.container}>
-      <Text>{text}</Text>
+      <Hello
+        style={{
+          color: 'yellow'
+        }}
+        bang
+      >
+        Hello World
+      </Hello>
       <StatusBar style="auto" />
     </View>
   )
