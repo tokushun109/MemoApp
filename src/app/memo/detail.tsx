@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import Header from '../../components/Header'
 import CircleButton from '../../components/CircleButton'
+import { Feather } from '@expo/vector-icons'
 
 const Detail = (): JSX.Element => {
   return (
@@ -23,7 +24,7 @@ const Detail = (): JSX.Element => {
           bottom: 'auto'
         }}
       >
-        +
+        <Feather name="check" size={40} />
       </CircleButton>
     </View>
   )
