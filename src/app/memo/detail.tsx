@@ -3,6 +3,11 @@ import Header from '../../components/Header'
 import CircleButton from '../../components/CircleButton'
 import { IconEnum } from '../../../types/icon'
 import Icon from '../../components/Icon'
+import { router } from 'expo-router'
+
+const handlePress = (): void => {
+  router.push('/memo/edit')
+}
 
 const Detail = (): JSX.Element => {
   return (
@@ -20,6 +25,7 @@ const Detail = (): JSX.Element => {
         </Text>
       </ScrollView>
       <CircleButton
+        onPress={handlePress}
         style={{
           top: 160,
           bottom: 'auto'
@@ -53,12 +59,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 16
   },
-  memoBody: {
-    paddingVertical: 32,
-    paddingHorizontal: 27
-  },
+  memoBody: { marginVertical: 32, paddingHorizontal: 27 },
   memoBodyText: {
-    flex: 1,
     fontSize: 16,
     lineHeight: 24,
     color: 'black'

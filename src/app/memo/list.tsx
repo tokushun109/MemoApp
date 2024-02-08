@@ -4,6 +4,11 @@ import MemoListItem from '../../components/MemoListItem'
 import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
 import { IconEnum } from '../../../types/icon'
+import { router } from 'expo-router'
+
+const handlePress = (): void => {
+  router.push('/memo/create')
+}
 
 const List = (): JSX.Element => {
   // 空オブジェクトのリストを作成
@@ -17,7 +22,7 @@ const List = (): JSX.Element => {
       {list.map((_, i) => (
         <MemoListItem key={i} />
       ))}
-      <CircleButton>
+      <CircleButton onPress={handlePress}>
         <Icon name={IconEnum.Plus} />
       </CircleButton>
     </View>

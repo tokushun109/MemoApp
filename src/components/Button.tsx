@@ -1,16 +1,11 @@
-import { Alert, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 interface Props {
   label?: string
   onPress?: () => void
 }
 
-const Button = ({
-  label = 'Submit',
-  onPress = () => {
-    Alert.alert('送信しました')
-  }
-}: Props): JSX.Element => {
+const Button = ({ label = 'Submit', onPress }: Props): JSX.Element => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.buttonLabel}>{label}</Text>

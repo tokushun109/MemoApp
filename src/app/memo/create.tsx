@@ -3,6 +3,11 @@ import Header from '../../components/Header'
 import { IconEnum } from '../../../types/icon'
 import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
+import { router } from 'expo-router'
+
+const handlePress = (): void => {
+  router.back()
+}
 
 const Create = (): JSX.Element => {
   return (
@@ -11,7 +16,7 @@ const Create = (): JSX.Element => {
       <View style={styles.inputContainer}>
         <TextInput multiline style={styles.input} value="" />
       </View>
-      <CircleButton>
+      <CircleButton onPress={handlePress}>
         <Icon name={IconEnum.Check} />
       </CircleButton>
     </KeyboardAvoidingView>
