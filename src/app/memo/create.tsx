@@ -13,7 +13,7 @@ const handlePress = async (bodyText: string): Promise<void> => {
     const ref = collection(db, `users/${auth.currentUser.uid}/memos`)
     await addDoc(ref, {
       bodyText,
-      updateAt: Timestamp.fromDate(new Date())
+      updatedAt: Timestamp.fromDate(new Date())
     })
     router.back()
   } catch {}
