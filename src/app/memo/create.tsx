@@ -1,5 +1,4 @@
 import { StyleSheet, TextInput, View, KeyboardAvoidingView } from 'react-native'
-import Header from '../../components/Header'
 import { IconEnum } from '../../../types/icon'
 import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
@@ -12,7 +11,6 @@ const handlePress = (): void => {
 const Create = (): JSX.Element => {
   return (
     <KeyboardAvoidingView style={styles.container} behavior="height">
-      <Header />
       <View style={styles.inputContainer}>
         <TextInput multiline style={styles.input} value="" />
       </View>

@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import Header from '../../components/Header'
 import CircleButton from '../../components/CircleButton'
 import { IconEnum } from '../../../types/icon'
 import Icon from '../../components/Icon'
@@ -12,7 +11,6 @@ const handlePress = (): void => {
 const Detail = (): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Header />
       <View style={styles.memoHeader}>
         <Text style={styles.memoTitle}>買い物リスト</Text>
         <Text style={styles.memoDate}>{new Date().toDateString()}</Text>
@@ -27,7 +25,7 @@ const Detail = (): JSX.Element => {
       <CircleButton
         onPress={handlePress}
         style={{
-          top: 160,
+          top: 64,
           bottom: 'auto'
         }}
       >
